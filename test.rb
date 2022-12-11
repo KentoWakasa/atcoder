@@ -104,7 +104,14 @@
 
 # puts 2/3.to_f
 
+a = 0
+b = 0
+c = 0
+sum = []
 
-puts 8**2
-puts 6**2
-puts 10**2
+   if a**2 and b**2 and c**2 == 0
+  elsif a**2 + b**2 == c**2
+    sum.push("true")
+   end
+
+puts sum.count
