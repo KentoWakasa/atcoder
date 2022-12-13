@@ -217,48 +217,102 @@
 
 
 
-puts "ABC088B - Card Game for Two"
+# puts "ABC088B - Card Game for Two"
 
+# n = 0
+# a = []
+# judg = []
+
+# alice = []
+# bob = []
+
+# loop do
+#   puts "カードの総数を決めます。1 以上 100 以下の整数を入力してください"
+#   n = gets.to_i
+
+#   puts "それぞれのカードの数を決めてください。その際、1 以上 100 以下の整数で数字毎に空白を入れてください"
+#   a = gets.chomp.split(" ").map(&:to_i)
+
+#   if 1 <= n and n <= 100 and n.integer? and a.size == n
+#     a.each do |a|
+#       unless 1 <= a and a <= 100 and a.integer?
+#         judg.push("no")
+#       else
+#         judg.push("yes")
+#       end
+#     end
+#     unless judg.include?("no")
+#       break
+#     end
+#   end
+# end
+
+# while !a.empty? do
+
+#   alice.push(a.max)
+#   a.delete_at(a.index(a.max))
+
+#   if a.empty?
+#     break
+#   else
+#     bob.push(a.max)
+#     a.delete_at(a.index(a.max))
+#   end
+
+# end
+
+# puts alice.sum - bob.sum
+
+
+
+
+
+
+
+puts "ABC085B - Kagami Mochi"
 n = 0
-a = []
-judg = []
-
-alice = []
-bob = []
+d_get = 0
+d = []
+ary = 0
+res = 0
 
 loop do
-  puts "カードの総数を決めます。1 以上 100 以下の整数を入力してください"
+
+  puts "鏡餅の枚数を決めます。1≤N≤100の範囲で整数を入れてください"
   n = gets.to_i
 
-  puts "それぞれのカードの数を決めてください。その際、1 以上 100 以下の整数で数字毎に空白を入れてください"
-  a = gets.chomp.split(" ").map(&:to_i)
-
-  if 1 <= n and n <= 100 and n.integer? and a.size == n
-    a.each do |a|
-      unless 1 <= a and a <= 100 and a.integer?
-        judg.push("no")
+  puts "鏡餅の直径を枚数文入力してください。改行して入力してください1≤di≤100の範囲で整数を入れてください"
+  if n.integer? and 1 <= n and n <= 100
+    n.times do
+      d_get = gets.to_i
+      if d_get.integer? and 1 <= d_get and d_get <=100
+        d.push(d_get)
       else
-        judg.push("yes")
+        next
       end
     end
-    unless judg.include?("no")
-      break
-    end
   end
-end
 
-while !a.empty? do
-
-  alice.push(a.max)
-  a.delete_at(a.index(a.max))
-
-  if a.empty?
-    break
-  else
-    bob.push(a.max)
-    a.delete_at(a.index(a.max))
+  if d.size == n
+   break
   end
 
 end
 
-puts alice.sum - bob.sum
+
+d.sort!.reverse!
+
+if d.all?{|d| d == d[0]}
+  # res += 1
+  puts "why"
+else
+  # for ary in 0..n-2 do
+  #   if d[ary] >= d[ary+1]
+  #     res += 1
+  #   end
+  # end
+  puts "ok"
+end
+
+puts "結果は以下になります。"
+puts res
