@@ -269,50 +269,73 @@
 
 
 
-puts "ABC085B - Kagami Mochi"
-n = 0
-d_get = 0
-d = []
-ary = 0
-res = 0
+# puts "ABC085B - Kagami Mochi"
+# n = 0
+# d_get = 0
+# d = []
+# ary = 0
+# res = 0
 
-loop do
+# loop do
 
-  puts "鏡餅の枚数を決めます。1≤N≤100の範囲で整数を入れてください"
-  n = gets.to_i
+#   puts "鏡餅の枚数を決めます。1≤N≤100の範囲で整数を入れてください"
+#   n = gets.to_i
 
-  puts "鏡餅の直径を枚数文入力してください。改行して入力してください1≤di≤100の範囲で整数を入れてください"
-  if n.integer? and 1 <= n and n <= 100
-    n.times do
-      d_get = gets.to_i
-      if d_get.integer? and 1 <= d_get and d_get <=100
-        d.push(d_get)
-      else
-        next
-      end
-    end
-  end
+#   puts "鏡餅の直径を枚数文入力してください。改行して入力してください1≤di≤100の範囲で整数を入れてください"
+#   if n.integer? and 1 <= n and n <= 100
+#     n.times do
+#       d_get = gets.to_i
+#       if d_get.integer? and 1 <= d_get and d_get <=100
+#         d.push(d_get)
+#       else
+#         next
+#       end
+#     end
+#   end
 
-  if d.size == n
-   break
-  end
+#   if d.size == n
+#   break
+#   end
 
+# end
+
+
+# d.sort!.reverse!
+
+# if d.all?{|d| d == d[0]}
+#   # res += 1
+#   puts "why"
+# else
+#   # for ary in 0..n-2 do
+#   #   if d[ary] >= d[ary+1]
+#   #     res += 1
+#   #   end
+#   # end
+#   puts "ok"
+# end
+
+# puts "結果は以下になります。"
+# puts res
+
+
+# puts "fizzbuzz"
+
+# a = 0
+# a = gets.to_i
+
+# if a % 3 == 0 and a % 5 == 0
+#   puts "FizzBuzz"
+# elsif a % 5 == 0
+#   puts "Buzz"
+# elsif a % 3 == 0
+#   puts "Fizz"
+# else
+#   puts a.to_s
+# end
+
+a = []
+# q1 = gets.chomp.split(" ").map(&:to_i)
+
+unless a.empty?
+ puts "ok"
 end
-
-
-d.sort!.reverse!
-
-if d.all?{|d| d == d[0]}
-  # res += 1
-  puts "why"
-else
-  # for ary in 0..n-2 do
-  #   if d[ary] >= d[ary+1]
-  #     res += 1
-  #   end
-  # end
-  puts "ok"
-end
-
-puts "結果は以下になります。"
-puts res
